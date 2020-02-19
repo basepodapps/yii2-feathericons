@@ -1,0 +1,21 @@
+{
+    "name": "snowpurple/yii2-feathericons",
+    "description": "An asset bundle of Feather Icons, a beautiful opensource icon set, made for use with Yii2.",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","assets","assetbundle","feather","feathericons"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Reine Sison",
+            "email": "reine@snowpurple.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "snowpurple\\feathericons\\": ""
+        }
+    }
+}
