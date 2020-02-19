@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist snowpurple/yii2-feathericons "*"
+php composer.phar require snowpurple/yii2-feathericons:dev-master
 ```
 
 or add
 
 ```
-"snowpurple/yii2-feathericons": "*"
+"snowpurple/yii2-feathericons": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
@@ -25,12 +25,48 @@ to the require section of your `composer.json` file.
 Usage
 -----
 
-Once the extension is installed, simply use it in your code by  :
+Once the extension is installed, create a custom asset bundle and use it in your app:
 
 ```php
-<?= \snowpurple\feathericons\AutoloadExample::widget(); ?>
+<?php
+
+namespace app\assets;
+
+use yii\web\AssetBundle;
+
+class FeatherIconsAsset extends AssetBundle
+{
+    public $depends = [
+        'snowpurple\feathericons\FeatherIconsAsset'
+    ];
+}
 ```
 
+Or, directly register the asset bundle in your views:
 
+```php
+use app\assets\AppAsset;
+use snowpurple\feathericons\FeatherIconsAsset;
 
-**Work in progress.**
+AppAsset::register($this);
+FeatherIconsAsset::register($this);
+```
+
+You can also use it together with [Krajee's Yii2-Icons](https://github.com/kartik-v/yii2-icons) extension in your views:
+
+```php
+use kartik\icons\Icon;
+Icon::map($this);
+
+// Add 'Feather Icons' as custom icon framework
+Icon::addFramework('feather', [
+    'class' => '\snowpurple\feathericons\FeatherIconsAsset',
+    'prefix' => 'feather-icon-',
+]);
+Icon::map($this, 'feather');
+
+---
+
+// Sample usage
+<?= Icon::show('users', ['class'=>'page-header-icon', 'data-feather' => 'users', 'framework' => 'feather']) ?>
+```
