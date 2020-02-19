@@ -1,6 +1,6 @@
 Feather Icons Asset Bundle for Yii2
 ===================================
-An asset bundle of Feather Icons, a beautiful opensource icon set, made for use with Yii2.
+An asset bundle of [Feather Icons](https://feathericons.com), a beautiful open source icon set, made for use with Yii2.
 
 Installation
 ------------
@@ -68,5 +68,12 @@ Icon::map($this, 'feather');
 ---
 
 // Sample usage
-<?= Icon::show('users', ['class'=>'page-header-icon', 'data-feather' => 'users', 'framework' => 'feather']) ?>
+<?= Icon::show('users', [
+    'class'=>'page-header-icon',
+    'data-feather' => 'users',
+    'framework' => 'feather'
+]) ?>
 ```
+
+
+*feather-icons@4.26.0*
