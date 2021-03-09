@@ -1,5 +1,6 @@
 {
     "name": "snowpurple/yii2-feathericons",
+    "version": "1.0.0",
     "description": "An asset bundle of Feather Icons, a beautiful opensource icon set, made for use with Yii2.",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","assets","assetbundle","feather","feathericons"],

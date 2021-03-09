@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require snowpurple/yii2-feathericons:dev-master
+php composer.phar require snowpurple/yii2-feathericons:1.0.0
 ```
 
 or add
 
 ```
-"snowpurple/yii2-feathericons": "dev-master"
+"snowpurple/yii2-feathericons": "1.0.0"
 ```
 
 to the require section of your `composer.json` file.
@@ -76,4 +76,4 @@ Icon::map($this, 'feather');
 ```
 
 
-*feather-icons@4.26.0*
+*feather-icons@4.28.0*
