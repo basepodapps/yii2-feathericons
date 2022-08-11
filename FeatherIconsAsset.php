@@ -1,12 +1,12 @@
 <?php
 
-namespace snowpurple\feathericons;
+namespace basepodapps\feathericons;
 
 use yii\web\AssetBundle;
 
 class FeatherIconsAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/snowpurple/yii2-feathericons';
+    public $sourcePath = '@vendor/basepodapps/yii2-feathericons';
 
     public $js = [
         'assets/feather.min.js'

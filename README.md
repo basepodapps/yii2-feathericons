@@ -5,18 +5,18 @@ An asset bundle of [Feather Icons](https://feathericons.com), a beautiful open s
 Installation
 ------------
 
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
+The preferred way to install this extension is through [Composer](http://getcomposer.org/download/).
 
 Either run
 
 ```
-php composer.phar require snowpurple/yii2-feathericons:1.0.0
+php composer.phar require basepodapps/yii2-feathericons:^1.0.0
 ```
 
 or add
 
 ```
-"snowpurple/yii2-feathericons": "1.0.0"
+"basepodapps/yii2-feathericons": "^1.0.0"
 ```
 
 to the require section of your `composer.json` file.
@@ -37,7 +37,7 @@ use yii\web\AssetBundle;
 class FeatherIconsAsset extends AssetBundle
 {
     public $depends = [
-        'snowpurple\feathericons\FeatherIconsAsset'
+        'basepodapps\feathericons\FeatherIconsAsset'
     ];
 }
 ```
@@ -46,7 +46,7 @@ Or, directly register the asset bundle in your views:
 
 ```php
 use app\assets\AppAsset;
-use snowpurple\feathericons\FeatherIconsAsset;
+use basepodapps\feathericons\FeatherIconsAsset;
 
 AppAsset::register($this);
 FeatherIconsAsset::register($this);
@@ -60,7 +60,7 @@ Icon::map($this);
 
 // Add 'Feather Icons' as custom icon framework
 Icon::addFramework('feather', [
-    'class' => '\snowpurple\feathericons\FeatherIconsAsset',
+    'class' => '\basepodapps\feathericons\FeatherIconsAsset',
     'prefix' => 'feather-icon-',
 ]);
 Icon::map($this, 'feather');
@@ -76,4 +76,4 @@ Icon::map($this, 'feather');
 ```
 
 
-*feather-icons@4.28.0*
+*feather-icons@4.29.0*
